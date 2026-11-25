@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="theme-color" content="#fcfbf8"/>
+<meta name="theme-color" content="#ffffff"/>
 <title>SENSOR / Light Concept V5</title>
 <meta name="description" content="Демонстрационный концепт SENSOR: премиальная типографика, интерактивные сценарии освещения, каталог и подбор комплектации."/>
 <style>
@@ -205,6 +205,17 @@ body{background:#fcfbf8;color:#242b34}
 .light-link{color:#284d87!important}
 a:focus-visible,button:focus-visible,input:focus-visible{outline-color:#416caa}
 @media(max-width:760px){.hero{flex-direction:column-reverse}.hero-content{background:#f4f1eb}.header .logo{color:#24334c}.light-stage,.light-panel{background:#f0eee9}}
+
+
+/* SENSOR V5.1: pure white site backgrounds, blue restricted to accents */
+:root{--canvas:#ffffff;--mist:#ffffff;--white:#ffffff}
+html,body{background:#ffffff}
+.header,.demo-banner,.small-intro,#collections,#catalog,.shop-bg,.statement,.light-lab,.light-panel,.light-stage,.product-feature,.feature-detail,.footer,.drawer{background:#ffffff}
+.hero,.hero-content{background:#ffffff}
+.hero-content::before{background:none}
+.header .logo-orbit:after{box-shadow:0 0 0 2px #ffffff}
+.footer .logo-orbit:after{box-shadow:0 0 0 2px #ffffff}
+.footer{border-top:1px solid #e7e7e7}
 
 </style>
 </head>
