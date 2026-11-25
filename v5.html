@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#fcfbf8"/>
+<title>SENSOR / Light Concept V5</title>
+<meta name="description" content="Демонстрационный концепт SENSOR: премиальная типографика, интерактивные сценарии освещения, каталог и подбор комплектации."/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Oranienbaum&display=swap');
+:root{--night:#202c2b;--ink:#1f2b2b;--mist:#f4f3ef;--canvas:#f8f8f5;--sage:#b4c3b5;--accent:#dbedb6;--line:#dcded7;--muted:#727b77;--white:#fff;--shadow:0 24px 65px rgba(23,35,33,.14)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Onest',Arial,sans-serif;color:var(--ink);background:var(--canvas);-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #87b19b;outline-offset:3px}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}::selection{background:#c1d7b4;color:#142222}
+.demo-banner{background:#ddecbe;display:flex;justify-content:center;align-items:center;gap:9px;padding:8px 16px;font-size:11px;letter-spacing:.03em;text-align:center}.demo-banner b{font-weight:800}.header{background:#f8f8f5;position:sticky;z-index:50;top:0;border-bottom:1px solid #deded7;backdrop-filter:blur(16px)}.header-inner{max-width:1480px;margin:auto;display:flex;height:86px;align-items:center;padding:0 5%;gap:42px}.logo{font-family:'Oranienbaum','Oranienbaum',Georgia,serif;letter-spacing:.31em;font-size:33px;white-space:nowrap;line-height:1}.logo small{display:block;font:500 8px Onest,sans-serif;letter-spacing:.52em;margin-top:9px;text-align:center}.header-nav{display:flex;align-items:center;gap:29px;margin:auto}.header-nav a{font-size:12px;font-weight:700;transition:opacity .2s}.header-nav a:hover{opacity:.5}.nav-actions{display:flex;align-items:center;gap:9px}.icon-btn{width:41px;height:41px;border:1px solid transparent;background:transparent;border-radius:50%;display:grid;place-items:center;color:inherit;position:relative}.icon-btn:hover{border-color:#c6ccc2}.icon-btn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}.dot-count{position:absolute;background:#dbedb6;color:#26312c;width:17px;height:17px;border-radius:50%;font-size:10px;top:1px;right:0;display:grid;place-items:center;font-weight:800}.menu-btn{display:none}.container{width:min(1360px,90%);margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.19em;font-size:10px;font-weight:800}.serif{font-family:'Oranienbaum','Oranienbaum',Georgia,serif;font-weight:400;letter-spacing:-.018em}.cta{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;padding:16px 22px;background:var(--accent);color:#182725;font-size:12px;font-weight:800;border:1px solid var(--accent);transition:background .2s,transform .2s}.cta:hover{background:#f1ffc9;transform:translateY(-2px)}.cta-dark{background:var(--night);color:white;border-color:var(--night)}.cta-dark:hover{background:#3d514c}.arrow{font-size:22px;font-weight:300;line-height:.65}.ghost-link{display:inline-flex;gap:21px;align-items:center;border-bottom:1px solid currentColor;padding-bottom:8px;font-size:12px;font-weight:800}.ghost-link:hover{opacity:.6}
+.hero{min-height:695px;background:var(--night);display:grid;grid-template-columns:46% 54%;overflow:hidden}.hero-content{color:white;position:relative;display:flex;flex-direction:column;justify-content:center;padding:64px clamp(24px,7vw,110px) 65px max(5vw,calc((100vw - 1360px)/2));z-index:1}.hero-content::before{content:'';position:absolute;inset:0;opacity:.18;background:radial-gradient(circle at 45% 0%,#7ba59a 0%,transparent 40%);pointer-events:none}.hero-content>*{position:relative}.hero-kicker{display:flex;gap:16px;align-items:center;color:#d3e2d0;margin-bottom:38px}.hero-kicker::before{content:'';width:25px;height:1px;background:var(--accent)}.hero h1{font-size:clamp(52px,5.65vw,90px);line-height:1.01;margin:0;max-width:580px}.hero h1 em{font-style:normal;color:#d7e9c1}.hero-p{color:#d3dad4;line-height:1.85;font-size:13px;margin:29px 0 32px;max-width:345px}.hero-footer{display:flex;align-items:center;gap:27px}.hero-desc{font-size:10px;color:#d0d9d1;max-width:100px;line-height:1.7}.hero-visual{min-height:695px;position:relative;overflow:hidden;background:#b1a99d}.hero-visual img{width:100%;height:100%;object-fit:cover;object-position:54% 50%;filter:saturate(.73) contrast(1.02);transform:scale(1.04)}.hero-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,37,35,.14),transparent 40%),linear-gradient(0deg,rgba(23,27,26,.26),transparent 35%)}.hero-vertical{position:absolute;bottom:32px;right:35px;color:white;font-size:10px;letter-spacing:.15em;z-index:1}.hero-marker{position:absolute;top:37px;right:35px;z-index:1;display:flex;gap:7px}.hero-marker span{height:6px;width:6px;border-radius:50%;border:1px solid white}.hero-marker span:first-child{background:white}.small-intro{border-bottom:1px solid var(--line);padding:28px 0}.small-intro .container{display:flex;justify-content:space-between;align-items:center;gap:18px}.small-intro strong{font-size:12px}.small-intro p{font-size:12px;color:var(--muted);margin:0}.section{padding:112px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:36px}.section-head h2{font-size:clamp(37px,4vw,60px);line-height:1.12;margin:15px 0 0}.section-head p{max-width:385px;line-height:1.75;font-size:12px;color:var(--muted);margin:0}.collections{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.collection{min-height:325px;background:var(--night);color:white;position:relative;padding:28px;overflow:hidden;display:flex;align-items:flex-end;transition:transform .25s}.collection:hover{transform:translateY(-5px)}.collection img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.62);opacity:.72;transition:transform .7s}.collection:hover img{transform:scale(1.08)}.collection::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(19,27,26,.88),transparent 75%)}.collection-body{position:relative;z-index:1;width:100%}.collection-top{position:absolute;top:28px;left:28px;z-index:1;font-size:10px;letter-spacing:.2em}.collection-body h3{font-size:43px;margin:0 0 6px}.collection-body p{margin:0 0 17px;max-width:260px;color:#e4e9e2;font-size:11px;line-height:1.7}.collection-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #ffffff7a;padding-top:13px;font-size:10px}
+.shop-bg{background:#edf0ea}.shop-nav{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 30px}.filter-chip{border:1px solid #cfd8d0;padding:11px 19px;background:transparent;border-radius:40px;color:#43534c;font-size:11px;font-weight:800;transition:.2s}.filter-chip.active,.filter-chip:hover{background:var(--night);color:white;border-color:var(--night)}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.product-card{min-width:0}.product-image{width:100%;aspect-ratio:1.19;background:#d7d1c6;overflow:hidden;position:relative;cursor:pointer;border:none;padding:0}.product-image img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s;filter:saturate(.65)}.product-image:hover img{transform:scale(1.06)}.product-index{position:absolute;top:16px;left:17px;font-size:11px;color:var(--ink);background:#fafbf6e8;padding:7px 10px}.fav{border:none;background:#f5f7f0;width:36px;height:36px;position:absolute;top:15px;right:15px;border-radius:50%;font-size:21px;line-height:1}.fav.active{color:#a5514e}.product-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:22px 0}.product-meta h3{margin:0 0 7px;font:400 27px 'Oranienbaum',Georgia,serif;letter-spacing:-.03em}.product-meta p{font-size:10px;color:var(--muted);margin:0}.product-meta strong{font-size:12px;white-space:nowrap;margin-top:5px}.product-foot{border-top:1px solid #cdd5cc;padding:14px 0;display:flex;justify-content:space-between;gap:10px;font-size:11px}.product-foot button{padding:0;border:none;background:none;font-size:11px;font-weight:800;border-bottom:1px solid currentColor}.empty{grid-column:1/-1;padding:40px;font-size:14px;color:var(--muted)}
+.statement{background:#dbe5d8;padding:84px 0}.statement-inner{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px}.statement h2{font-size:clamp(33px,3.5vw,56px);line-height:1.22;margin:0}.statement p{font-size:13px;line-height:2;color:#40534b;max-width:420px}.statement small{letter-spacing:.2em;font-size:10px}
+.product-feature{display:grid;grid-template-columns:50% 50%;min-height:650px;background:#f5f6f2}.feature-photo{background:#d0cbc1;min-height:640px;overflow:hidden;position:relative}.feature-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.78)}.photo-label{position:absolute;left:32px;top:31px;background:#f8f8f4;padding:10px 13px;font-size:10px;letter-spacing:.12em}.feature-detail{padding:69px clamp(24px,5vw,85px);display:flex;flex-direction:column;justify-content:center}.feature-detail h2{font-size:clamp(39px,4vw,60px);margin:12px 0 14px}.feature-intro{font-size:12px;line-height:1.9;color:var(--muted);margin:0 0 23px;max-width:460px}.option-label{font-size:11px;font-weight:800;margin-bottom:11px;display:flex;justify-content:space-between;align-items:center}.option-block{margin:0 0 22px}.options{display:flex;gap:7px;flex-wrap:wrap}.option{font-size:11px;font-weight:700;padding:12px 17px;background:transparent;border:1px solid #cfd4cb;color:#46534c}.option.active{border-color:var(--night);background:var(--night);color:#fff}.swatches{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.swatch{width:39px;height:39px;border:3px solid #f5f6f2;outline:1px solid transparent;border-radius:50%;background:var(--swatch)}.swatch.active{outline:1.5px solid #1e302c}.swatch:focus-visible{outline:3px solid #87b19b}.switch-row{display:flex;align-items:center;gap:10px;font-size:11px;margin-bottom:13px;cursor:pointer}.switch-row input{accent-color:#27372f;width:16px;height:16px}.feature-bottom{display:flex;gap:17px;align-items:end;justify-content:space-between;margin-top:15px;padding-top:26px;border-top:1px solid var(--line)}.feature-price{font:400 29px 'Oranienbaum',Georgia,serif}.feature-price small{display:block;font:10px Onest,sans-serif;color:var(--muted);padding-top:6px}.feature-actions{display:flex;gap:7px}.feature-actions .cta{padding:16px 22px}.fineprint{font-size:10px;color:var(--muted);line-height:1.8;margin-top:12px}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 auto}.benefit{padding:38px 22px 37px;border-right:1px solid var(--line)}.benefit:first-child{padding-left:0}.benefit:last-child{border-right:0}.benefit-symbol{font:400 35px 'Oranienbaum',Georgia,serif;color:#627f73}.benefit h3{font-size:12px;margin:18px 0 9px}.benefit p{font-size:11px;line-height:1.7;color:var(--muted);margin:0}.editorial{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}.editorial-card{height:370px;position:relative;overflow:hidden;background:#ccd3c8;color:white;padding:32px;display:flex;flex-direction:column;justify-content:end}.editorial-card img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:center;inset:0;filter:saturate(.53)}.editorial-card:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,30,29,.86),transparent 80%)}.editorial-card>*:not(img){position:relative;z-index:1}.editorial-card h3{font:400 37px 'Oranienbaum',Georgia,serif;letter-spacing:-.04em;margin:0 0 12px}.editorial-card p{font-size:12px;line-height:1.75;max-width:280px;margin:0 0 17px}.editorial-card a{align-self:flex-start;color:white}
+.footer{background:#1c2827;color:#f7f8f2;padding:75px 0 35px}.footer-main{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px;padding-bottom:70px}.footer .logo{font-size:32px;display:inline-block}.footer-blurb{font-size:12px;color:#abbab0;line-height:1.9;max-width:280px;margin-top:28px}.footer h4{font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 23px;color:#d9e9c2}.footer a:not(.logo){display:block;font-size:12px;color:#bbc9c0;margin:0 0 13px}.footer a:hover{color:white}.footer-end{display:flex;justify-content:space-between;border-top:1px solid #3a4844;padding-top:25px;gap:15px;color:#97aaa1;font-size:10px}
+.overlay{position:fixed;inset:0;background:#13231ec2;z-index:100;display:none;justify-content:flex-end}.overlay.open{display:flex}.drawer{width:min(490px,100%);background:var(--canvas);height:100%;overflow:auto;padding:32px;position:relative;box-shadow:var(--shadow)}.drawer h2{font:400 40px 'Oranienbaum',Georgia,serif;margin:13px 0 16px}.drawer p{font-size:12px;line-height:1.8;color:var(--muted)}.drawer-top{display:flex;justify-content:space-between;align-items:center}.close{width:41px;height:41px;border:1px solid var(--line);background:transparent;font-size:24px}.summary{background:#e7ede4;margin:23px 0;padding:22px;font-size:12px;line-height:2}.field{display:block;margin:19px 0;font-size:11px;font-weight:800}.field input,.field textarea{width:100%;border:1px solid #cbd3cb;background:white;margin-top:8px;padding:15px;outline:none}.field textarea{height:105px;resize:vertical}.drawer .cta{width:100%;margin:9px 0;justify-content:center}.notice{padding:14px;background:#dcead1;font-size:11px;line-height:1.6;margin-top:13px;display:none}.notice.show{display:block}.mobile-links{display:none}.rise{animation:rise .6s both}@keyframes rise{from{transform:translateY(14px);opacity:0}to{transform:translateY(0);opacity:1}}
+@media(max-width:1100px){.header-inner{gap:20px}.header-nav{gap:15px}.hero{grid-template-columns:50% 50%;min-height:570px}.hero-visual{min-height:570px}.hero-content{padding-left:6vw}.section{padding:82px 0}.feature-detail{padding:46px 30px}.feature-photo{min-height:580px}.feature-bottom{align-items:flex-start;flex-direction:column}.footer-main{grid-template-columns:1.5fr 1fr 1fr}}
+@media(max-width:760px){.demo-banner{font-size:9px;padding:8px}.header-inner{height:68px;padding:0 5%;gap:9px}.logo{font-size:23px}.header-nav{display:none}.nav-actions{margin-left:auto}.menu-btn{display:grid}.hero{display:flex;flex-direction:column-reverse}.hero-visual{min-height:390px;height:390px}.hero-visual img{object-position:center 44%}.hero-content{padding:52px 6% 58px}.hero h1{font-size:clamp(43px,11vw,65px)}.hero-kicker{margin-bottom:20px}.hero-p{margin:20px 0}.hero-vertical{right:20px}.small-intro .container{flex-direction:column;align-items:flex-start}.section{padding:65px 0}.section-head{flex-direction:column;align-items:start;gap:16px}.section-head h2{font-size:40px}.collections{grid-template-columns:1fr}.collection{min-height:255px}.products{grid-template-columns:1fr 1fr;gap:12px}.product-meta{flex-direction:column;padding:15px 0;gap:0}.product-meta h3{font-size:22px}.product-meta strong{margin-top:8px}.statement{padding:55px 0}.statement-inner{grid-template-columns:1fr;gap:15px}.product-feature{grid-template-columns:1fr}.feature-photo{min-height:420px;height:420px}.feature-detail{padding:45px 6%}.feature-detail h2{font-size:43px}.benefits{grid-template-columns:1fr 1fr}.benefit{padding:23px 12px}.benefit:nth-child(2){border-right:0}.benefit:nth-child(3),.benefit:nth-child(4){border-top:1px solid var(--line)}.editorial{grid-template-columns:1fr}.editorial-card{height:295px}.footer-main{grid-template-columns:1fr 1fr;gap:35px}.footer-main>div:first-child{grid-column:1/-1}.footer-end{flex-direction:column}.mobile-links{display:block;padding-top:18px}.mobile-links a{display:block;padding:18px 0;border-bottom:1px solid #d6ded5;font-size:18px}}
+@media(max-width:410px){.products{grid-template-columns:1fr}.hero-visual{height:300px;min-height:300px}.hero h1{font-size:44px}.feature-actions{width:100%}.feature-actions button{flex:1}.footer-main{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* SENSOR signature: a subtle sensory orbit and interactive light study */
+.sensor-mark{display:inline-flex;align-items:center;justify-content:center;width:43px;height:43px;position:relative;vertical-align:middle}
+.sensor-mark:before,.sensor-mark:after{content:'';position:absolute;border:1px solid currentColor;border-radius:50%;width:35px;height:35px;transform:rotate(-32deg) scaleX(.59)}
+.sensor-mark:after{transform:rotate(32deg) scaleX(.59);opacity:.52}.sensor-mark i{width:5px;height:5px;background:currentColor;border-radius:50%;z-index:2}
+.light-lab{background:#e8e7e1;padding:108px 0;overflow:hidden}.light-head{display:grid;grid-template-columns:1fr .75fr;align-items:end;gap:36px;margin-bottom:35px}.light-head h2{font-size:clamp(44px,5vw,80px);line-height:.97;margin:13px 0 0}.light-head h2 i{color:#879788;font-style:normal}.light-head p{max-width:350px;color:#5b6560;font-size:13px;line-height:1.9;margin:0 0 5px}.light-stage{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(300px,.6fr);min-height:590px;background:#24312c;color:white}.light-image{position:relative;min-height:590px;overflow:hidden;background:#b8b5ad;isolation:isolate}.light-image img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;filter:brightness(1.06) saturate(.82) sepia(.06);transition:filter .85s ease,transform .85s ease;transform:scale(1.015)}.light-image:after{content:'';position:absolute;inset:0;pointer-events:none;transition:background .85s ease;background:linear-gradient(105deg,rgba(246,228,194,.2),transparent 50%)}.light-stage[data-mood="day"] .light-image img{filter:brightness(1.12) saturate(.82) sepia(.03)}.light-stage[data-mood="day"] .light-image:after{background:linear-gradient(115deg,rgba(250,243,214,.23),transparent 48%)}.light-stage[data-mood="evening"] .light-image img{filter:brightness(.72) saturate(.88) sepia(.25)}.light-stage[data-mood="evening"] .light-image:after{background:linear-gradient(112deg,rgba(239,142,75,.24),rgba(40,27,38,.28) 80%)}.light-stage[data-mood="night"] .light-image img{filter:brightness(.42) saturate(.61) hue-rotate(10deg)}.light-stage[data-mood="night"] .light-image:after{background:linear-gradient(112deg,rgba(26,53,86,.48),rgba(12,18,30,.56))}.light-image-label{position:absolute;left:32px;top:30px;z-index:2;display:flex;align-items:center;gap:13px;color:white;font-size:10px;letter-spacing:.16em;font-weight:600;text-shadow:0 1px 12px #222}.light-panel{min-height:590px;padding:55px clamp(27px,3.8vw,63px);display:flex;flex-direction:column;justify-content:center}.light-panel .sensor-mark{color:#dae9cb;margin-bottom:14px}.light-panel h3{font-size:clamp(36px,3.4vw,54px);line-height:1.03;margin:15px 0 13px;font-weight:400;min-height:112px;display:flex;align-items:center}.light-panel .light-body{font-size:12px;color:#c7d2c6;line-height:1.9;min-height:110px;max-width:300px}.light-options{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0 25px}.light-choice{border:1px solid #7a877d;background:transparent;padding:13px 8px;color:#dde4dc;font-size:11px;text-align:center;transition:.2s;display:flex;flex-direction:column;align-items:center;gap:9px}.light-choice .light-dot{width:20px;height:20px;border-radius:50%;background:var(--tone);box-shadow:0 1px 11px #1114}.light-choice:hover,.light-choice[aria-pressed="true"]{color:#25312b;background:#e5e8df;border-color:#e5e8df}.light-note{font-size:10px;color:#b6c5b9;line-height:1.7;border-top:1px solid #68776c;padding-top:18px}.light-page-mark{letter-spacing:.19em;font-size:10px;opacity:.72}.light-link{margin-top:18px;color:#e1edcd!important;align-self:flex-start}
+@media(max-width:960px){.light-stage{grid-template-columns:1fr}.light-image{min-height:420px}.light-panel{padding:35px}.light-panel .light-body{min-height:0}.light-options{max-width:400px}}@media(max-width:760px){.light-lab{padding:62px 0}.light-head{grid-template-columns:1fr;gap:14px}.light-head h2{font-size:51px}.light-image{min-height:330px}.light-panel{padding:36px 25px}.light-image-label{top:20px;left:21px}}
+
+/* SENSOR V4 brand palette: deep navy and warm gold; original V4 features preserved */
+:root{--night:#1a2540;--ink:#202b45;--mist:#f1f2f7;--canvas:#f8f8fa;--sage:#b2bad0;--accent:#d1aa71;--line:#d9dce5;--muted:#71788c;--white:#fff;--shadow:0 24px 65px rgba(21,28,51,.16)}
+body{background:#f8f8fa;color:var(--ink)}
+::selection{background:#d1aa71;color:#19253e}
+.demo-banner{background:#e9dfcd;color:#182540}
+.header{background:#18233c;color:#f7f5ef;border-bottom:1px solid rgba(220,184,125,.22)}
+.header-inner{height:84px}
+.header .logo,.footer .logo{font-family:Onest,Arial,sans-serif;font-size:29px;letter-spacing:.23em;font-weight:400;color:#faf9f5;display:inline-flex;align-items:baseline}
+.logo small{display:none}
+.logo-orbit{position:relative;display:inline-block;color:#c9a062;letter-spacing:0;margin-right:.15em}
+.logo-orbit:after{content:"";position:absolute;width:2px;height:15px;top:25%;left:49%;background:#f3efe5;transform:rotate(36deg);border-radius:3px;box-shadow:0 0 0 2px #18233c}
+.header-nav a{font-weight:500;color:#f7f5f1}
+.header-nav a:hover{color:#ddb87f;opacity:1}
+.icon-btn:hover{border-color:#bd985b}
+.dot-count{background:#d2ab70;color:#1a263e}
+.cta{background:linear-gradient(125deg,#e4c58f,#c49b5c);border:1px solid #c9a468;color:#18253b;border-radius:5px;font-weight:700;box-shadow:0 5px 22px rgba(18,24,43,.15)}
+.cta:hover{background:#edd7ac}
+.hero{grid-template-columns:43% 57%;background:#15213c}
+.hero-content{background:linear-gradient(90deg,#14213c,rgba(20,32,59,.97) 76%,rgba(20,32,59,.45));z-index:2}
+.hero-content::before{background:radial-gradient(circle at 30% 20%,rgba(111,133,191,.25),transparent 60%)}
+.hero-kicker{color:#e4c28c}
+.hero-kicker:before{background:#e4c28c}
+.hero h1 em{color:#e6c48b}
+.hero-p{color:#e3e5eb}
+.hero-visual{background:#18233e}
+.hero-visual img{filter:saturate(.84) contrast(1.07) brightness(.84)}
+.hero-visual:after{background:linear-gradient(90deg,rgba(16,25,49,.45),transparent 48%),linear-gradient(0deg,rgba(12,18,40,.36),transparent 38%)}
+.hero-marker span{border-color:#e3bd7f}
+.hero-marker span:first-child{background:#e3bd7f}
+.small-intro{background:#22304e;color:#e9e9ee;border-color:#36425d}
+#collections,#catalog{background:#202c49;color:#f7f5f0}
+#collections .section-head h2,#catalog .section-head h2{color:#faf8f3}
+#collections .section-head p,#catalog .section-head p{color:#bec7d8}
+.collection{background:#18233e;border:1px solid rgba(215,176,109,.32);border-radius:12px;overflow:hidden}
+.collection img{filter:saturate(.84) brightness(.86)}
+.collection:after{background:linear-gradient(0deg,rgba(14,22,42,.87),transparent 84%)}
+.shop-bg{background:#202c49}
+.shop-nav .filter-chip{color:#f2f1f0;background:rgba(255,255,255,.04);border-color:#65718a}
+.shop-nav .filter-chip.active,.shop-nav .filter-chip:hover{background:#cda469;border-color:#cda469;color:#1b2a43}
+.product-card{color:#f8f8f9}
+.product-image{background:#364563;border-radius:10px}
+.product-image img{filter:saturate(.88) contrast(1.04)}
+.product-index{background:#f2efe8;color:#1e2b46}
+.product-meta p,.product-foot{color:#cbd2dd}
+.product-foot{border-color:#55617a}
+.product-foot button{color:#e3c492}
+.fav{color:#1d2b46;background:#fbf8f3}
+.fav.active{color:#c39960}
+.statement{background:#e6e9f1}
+.statement h2,.statement p{color:#1d2d4b}
+.product-feature{background:#f7f7fa}
+.feature-photo{background:#b4bac8}
+.feature-photo img{filter:saturate(.91) contrast(1.04)}
+.photo-label{background:#1b2946;color:#e3c08a}
+.option{border-color:#bcc3d2;color:#273651}
+.option.active{background:#1b2a47;border-color:#1b2a47;color:white}
+.swatch.active{outline-color:#bb955b}
+.switch-row input{accent-color:#c59d66}
+.benefit-symbol{color:#b68a51}
+.editorial-card{background:#182743;border-radius:9px;overflow:hidden}
+.editorial-card:after{background:linear-gradient(0deg,rgba(13,23,46,.9),rgba(19,29,51,.04) 80%)}
+.footer{background:#111c34;color:#f5f3ed}
+.footer h4{color:#dabc89}
+.footer a:not(.logo){color:#c5cfdf}
+.footer-end{border-color:#34415c}
+.overlay{background:rgba(10,17,36,.8)}
+.drawer{background:#f8f8fb}
+.summary{background:#e5e9f2}
+.notice{background:#ece4d6}
+.light-lab{background:#eff1f6}
+.light-head h2{color:#1c2946}
+.light-head h2 i{color:#b8915b}
+.light-head p{color:#5f6a81}
+.light-stage,.light-panel{background:#1a2846}
+.light-image-label{color:#edd1a4}
+.sensor-mark{color:#d4ae75}
+.light-stage{min-height:540px}
+.light-panel{min-height:540px}
+.light-panel .light-body{min-height:135px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline-color:#d2aa70}
+@media(max-width:760px){.header-inner{height:68px}.header .logo{font-size:23px}.hero{flex-direction:column-reverse}.hero-content{background:#15223e;padding:52px 6%}.hero-visual{height:350px;min-height:350px}.light-stage,.light-panel{min-height:0}.light-panel .light-body{min-height:135px}}
+
+
+/* SENSOR V5: warm minimal canvas, navy strictly as accent. V4 layout and interactions retained. */
+:root{--night:#233a62;--ink:#242b34;--mist:#f4f1ec;--canvas:#fcfbf8;--sage:#dedbd4;--accent:#284d87;--line:#e6e3dd;--muted:#727780;--white:#fff;--shadow:0 24px 65px rgba(38,43,54,.10)}
+body{background:#fcfbf8;color:#242b34}
+::selection{background:#c7d6eb;color:#1d3559}
+.demo-banner{background:#f0eee9;color:#657080;border-bottom:1px solid #e3e2dd}
+.header{background:rgba(253,252,249,.97);color:#252c36;border-bottom:1px solid #e7e4df}
+.header .logo{color:#24334c}
+.header .logo-orbit{color:#2d548b}
+.header .logo-orbit:after{background:#2d548b;box-shadow:0 0 0 2px #fcfbf8}
+.header-nav a{color:#37404c}
+.header-nav a:hover{color:#2d548b}
+.icon-btn:hover{border-color:#cad7e8}
+.dot-count{background:#2d548b;color:white}
+.cta,.cta-dark{background:#284d87;border:1px solid #284d87;color:#fff;box-shadow:none;border-radius:4px}
+.cta:hover,.cta-dark:hover{background:#1f3b68;border-color:#1f3b68;color:#fff}
+.hero{grid-template-columns:47% 53%;background:#f4f1eb}
+.hero-content{background:#f4f1eb;color:#27303b}
+.hero-content::before{background:radial-gradient(circle at 25% 15%,rgba(255,255,255,.85),transparent 55%);opacity:1}
+.hero-kicker{color:#43608c}
+.hero-kicker:before{background:#43608c}
+.hero h1{color:#252c34}
+.hero h1 em{color:#2d548b}
+.hero-p{color:#666e79}
+.hero-desc{color:#7a7f87}
+.hero-visual{background:#e5dfd6}
+.hero-visual img{filter:saturate(.84) contrast(1.02) brightness(1.04)}
+.hero-visual:after{background:linear-gradient(90deg,rgba(244,241,235,.17),transparent 30%),linear-gradient(0deg,rgba(26,35,43,.12),transparent 32%)}
+.hero-marker span{border-color:#f7f5f1}
+.hero-marker span:first-child{background:#f7f5f1}
+.small-intro{background:#fcfbf8;color:#404955;border-color:#e7e4df}
+#collections{background:#fcfbf8;color:#26303c}
+#catalog{background:#f5f3ef;color:#26303c}
+#collections .section-head h2,#catalog .section-head h2{color:#27303b}
+#collections .section-head p,#catalog .section-head p{color:#717781}
+.collection{background:#ded9d1;border:0;border-radius:7px}
+.collection img{filter:saturate(.82) brightness(.98)}
+.collection:after{background:linear-gradient(0deg,rgba(21,28,33,.79),transparent 74%)}
+.collection-top,.collection-body{color:#fff}
+.shop-bg{background:#f5f3ef}
+.shop-nav .filter-chip{color:#56616c;background:#fff;border-color:#d9dce0}
+.shop-nav .filter-chip.active,.shop-nav .filter-chip:hover{background:#284d87;border-color:#284d87;color:white}
+.product-card{color:#2d3540}
+.product-image{background:#e3dfd9;border-radius:5px}
+.product-image img{filter:saturate(.84) contrast(1.02)}
+.product-index{background:#fdfcf8;color:#4d5a68}
+.product-meta p,.product-foot{color:#747982}
+.product-foot{border-color:#dadad9}
+.product-foot button{color:#284d87}
+.fav{background:#fcfbf8;color:#334154}
+.fav.active{color:#bb6262}
+.statement{background:#e9e8e3}
+.statement h2{color:#29313a}
+.statement p{color:#626b72}
+.statement i{color:#2e5587}
+.product-feature{background:#fcfbf8}
+.feature-photo{background:#e3ded5}
+.feature-photo img{filter:saturate(.83) contrast(1.02)}
+.photo-label{background:#fcfbf8;color:#2d548b}
+.option{border-color:#d7d9da;color:#414c59;background:#fff}
+.option.active{background:#284d87;border-color:#284d87;color:white}
+.swatch.active{outline-color:#284d87}
+.switch-row input{accent-color:#284d87}
+.benefit-symbol{color:#2e5587}
+.editorial-card{background:#cfcac3;border-radius:5px}
+.editorial-card:after{background:linear-gradient(0deg,rgba(24,29,34,.75),transparent 79%)}
+.footer{background:#eeece7;color:#303946;border-top:1px solid #dddcd8}
+.footer .logo{color:#27354a}
+.footer .logo-orbit:after{box-shadow:0 0 0 2px #eeece7}
+.footer .footer-blurb{color:#6f7680}
+.footer h4{color:#2e5488}
+.footer a:not(.logo){color:#515c69}
+.footer a:hover{color:#284d87}
+.footer-end{border-color:#d4d6d8;color:#7b8089}
+.footer-main>div:last-child p{color:#6f7680!important}
+.overlay{background:rgba(22,30,43,.6)}
+.drawer{background:#fcfbf8}
+.summary{background:#f0eee9}
+.notice{background:#e5eef7}
+.light-lab{background:#faf9f6}
+.light-head h2{color:#25303d}
+.light-head h2 i{color:#2d548b}
+.light-head p{color:#6f7681}
+.light-stage,.light-panel{background:#f0eee9;color:#293441}
+.light-image-label{color:white}
+.light-panel .sensor-mark{color:#2d548b}
+.light-panel .light-body{color:#636d79}
+.light-choice{color:#4d5967;border-color:#d0d2d2;background:#faf9f6}
+.light-choice:hover,.light-choice[aria-pressed="true"]{background:#284d87;border-color:#284d87;color:#fff}
+.light-note{color:#727b85;border-color:#d5d7d8}
+.light-link{color:#284d87!important}
+a:focus-visible,button:focus-visible,input:focus-visible{outline-color:#416caa}
+@media(max-width:760px){.hero{flex-direction:column-reverse}.hero-content{background:#f4f1eb}.header .logo{color:#24334c}.light-stage,.light-panel{background:#f0eee9}}
+
+</style>
+</head>
+<body>
+<div class="demo-banner"><b>КОНЦЕПЦИЯ / НЕОФИЦИАЛЬНАЯ ДЕМОВЕРСИЯ</b><span>Дизайн-предложение для SENSOR · отдельные визуализации и сценарии покупки</span></div>
+<header class="header"><div class="header-inner">
+<a class="logo" href="#home" aria-label="SENSOR, на главную">SENS<span class="logo-orbit">O</span>R<small>SLEEP CULTURE</small></a>
+<nav class="header-nav" aria-label="Основная навигация"><a href="#collections">Коллекции</a><a href="#catalog">Кровати</a><a href="#configurator">Подобрать кровать</a><a href="#other">Матрасы и панели</a><a href="#values">О фабрике</a></nav>
+<div class="nav-actions"><button class="icon-btn" id="searchBtn" title="Перейти к каталогу" aria-label="Поиск"><svg viewBox="0 0 24 24"><circle cx="10.7" cy="10.7" r="6.5"/><path d="m16 16 5 5"/></svg></button><button class="icon-btn" id="favoritesBtn" title="Избранное" aria-label="Показать избранное"><svg viewBox="0 0 24 24"><path d="M20 9c0 5-8 11-8 11S4 14 4 9a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9z"/></svg><span class="dot-count" id="favCount" hidden>0</span></button><button class="icon-btn" id="cartBtn" title="Запросить расчёт" aria-label="Открыть заявку"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1 13H5L4 8zM9 9V6a3 3 0 0 1 6 0v3"/></svg></button><button class="icon-btn menu-btn" id="mobileMenu" title="Меню" aria-label="Открыть меню"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></div></header>
+<main>
+<section class="hero" id="home"><div class="hero-content"><div class="hero-kicker eyebrow">SENSOR / НАЧИНАЕТСЯ С ОЩУЩЕНИЙ</div><h1 class="serif">Сон, у которого есть <em>характер.</em></h1><p class="hero-p">Дизайнерские кровати и продуманные пространства для жизни. Выбирайте форму, размер и фактуру - остальное создадим под вас.</p><div class="hero-footer"><a class="cta" href="#catalog">Исследовать коллекцию <span class="arrow">↗</span></a><span class="hero-desc">Каждая деталь имеет значение</span></div></div><div class="hero-visual"><img src="assets/sensor-v4-hero.svg" alt="Концептуальная визуализация мягкой кровати в современном интерьере"/><div class="hero-marker"><span></span><span></span><span></span></div><span class="hero-vertical">DESIGNED FOR YOUR SPACE — 01 / 03</span></div></section>
+<div class="small-intro"><div class="container"><strong>Не просто кровать. Продолжение вашего пространства.</strong><p>Собственное производство · Индивидуальные размеры · Большой выбор обивок</p></div></div>
+<section class="section" id="collections"><div class="container"><div class="section-head"><div><span class="eyebrow">01 / КОЛЛЕКЦИИ</span><h2 class="serif">Три подхода.<br/>Один характер.</h2></div><p>Не ограничивайтесь привычным. Выбирайте кровать, которая точно соответствует вашему ощущению дома.</p></div><div class="collections"><a href="#catalog" class="collection" data-collection="Silver"><img src="assets/sensor-v4-silver.svg" alt="Концептуальное фото кровати, коллекция Silver"/><span class="collection-top">01 / SILVER</span><div class="collection-body"><h3 class="serif">Silver.</h3><p>Лаконичная форма. Уверенная классика.</p><div class="collection-bottom"><span>СМОТРЕТЬ КОЛЛЕКЦИЮ</span><span class="arrow">↗</span></div></div></a><a href="#catalog" class="collection" data-collection="Gold"><img src="assets/sensor-v4-gold.svg" alt="Концептуальное фото кровати, коллекция Gold"/><span class="collection-top">02 / GOLD</span><div class="collection-body"><h3 class="serif">Gold.</h3><p>Больше свободы для выразительных решений.</p><div class="collection-bottom"><span>СМОТРЕТЬ КОЛЛЕКЦИЮ</span><span class="arrow">↗</span></div></div></a><a href="#catalog" class="collection" data-collection="Platinum"><img src="assets/sensor-v4-platinum.svg" alt="Концептуальное фото кровати, коллекция Platinum"/><span class="collection-top">03 / PLATINUM</span><div class="collection-body"><h3 class="serif">Platinum.</h3><p>Для пространств, в которых важна каждая деталь.</p><div class="collection-bottom"><span>СМОТРЕТЬ КОЛЛЕКЦИЮ</span><span class="arrow">↗</span></div></div></a></div></div></section>
+<section class="section shop-bg" id="catalog"><div class="container"><div class="section-head"><div><span class="eyebrow">02 / ВАША КОЛЛЕКЦИЯ</span><h2 class="serif">Форма вашего отдыха.</h2></div><p>Реальные названия моделей SENSOR. Изображения в этой концепции - демонстрационные и не показывают точный внешний вид изделий.</p></div><div class="shop-nav" id="filters" role="group" aria-label="Фильтр коллекций"><button class="filter-chip active" data-filter="Все" aria-pressed="true">Все модели</button><button class="filter-chip" data-filter="Silver" aria-pressed="false">Silver</button><button class="filter-chip" data-filter="Gold" aria-pressed="false">Gold</button><button class="filter-chip" data-filter="Platinum" aria-pressed="false">Platinum</button><button class="filter-chip" data-filter="Избранное" aria-pressed="false">♡ Избранное</button></div><div class="products" id="productGrid" aria-live="polite"></div><div style="margin-top:35px;text-align:center"><a class="ghost-link" href="https://sensorsleep.ru/collection/krovati" target="_blank" rel="noopener noreferrer">Реальный каталог на сайте SENSOR <span class="arrow">↗</span></a></div></div></section>
+<section class="statement" id="values"><div class="container statement-inner"><div><small>ФИЛОСОФИЯ SENSOR</small><h2 class="serif">Хороший дизайн не пытается понравиться всем.<br/><i>Он становится вашим.</i></h2></div><div><p>Интерьер начинается с ощущения. В коллекциях SENSOR можно выбрать модель и адаптировать её под ваш дом: размеры, фактуру и комплектацию.</p><a class="ghost-link" href="#configurator">Собрать свою комплектацию <span class="arrow">↗</span></a></div></div></section>
+<section class="light-lab" id="light-experience" aria-labelledby="lightHeading"><div class="container"><div class="light-head"><div><div class="eyebrow">SENSOR / ИНТЕРАКТИВНЫЙ ЭКСПЕРИМЕНТ 01</div><h2 class="serif" id="lightHeading">Почувствуйте<br/><i>своё пространство.</i></h2></div><p>Кровать живёт вместе с интерьером. Исследуйте, как меняется атмосфера комнаты в разное время суток. Не просто товар на белом фоне, а ощущение будущего дома.</p></div><div class="light-stage" id="lightStage" data-mood="day"><div class="light-image"><img id="lightImage" alt="Демонстрационная интерьерная визуализация кровати в меняющемся освещении"><div class="light-image-label"><span class="sensor-mark" aria-hidden="true"><i></i></span> СВЕТ / АТМОСФЕРА / SENSOR</div></div><div class="light-panel"><span class="sensor-mark" aria-hidden="true"><i></i></span><div class="eyebrow">СЦЕНАРИЙ ПРОСТРАНСТВА</div><h3 class="serif" id="lightTitle">Тихое утро.</h3><p class="light-body" id="lightDescription" aria-live="polite">Мягкий дневной свет раскрывает оттенки ткани и подчёркивает фактуру изголовья.</p><div class="light-options" role="group" aria-label="Выбрать время суток"><button class="light-choice" data-mood-choice="day" aria-pressed="true"><span class="light-dot" style="--tone:#edd9a8"></span>Утро</button><button class="light-choice" data-mood-choice="evening" aria-pressed="false"><span class="light-dot" style="--tone:#c57d55"></span>Вечер</button><button class="light-choice" data-mood-choice="night" aria-pressed="false"><span class="light-dot" style="--tone:#64758f"></span>Ночь</button></div><div class="light-note">Концепция интерактивного просмотра. Освещение имитируется стилизацией одного изображения; это не фотореалистичный 3D-конфигуратор.</div><a href="#configurator" class="ghost-link light-link">Выбрать кровать <span class="arrow">↗</span></a></div></div></div></section>
+<section class="product-feature" id="configurator"><div class="feature-photo"><img id="featureImage" src="assets/sensor-v4-detail.svg" alt="Концептуальное изображение кровати для демонстрации выбора размера и обивки"/><span class="photo-label">ИНТЕРАКТИВНЫЙ ПРИМЕР · НЕ ОФЕРТА</span></div><div class="feature-detail"><span class="eyebrow">03 / СОЗДАЙТЕ СВОЙ ВАРИАНТ</span><h2 class="serif" id="featureTitle">Кровать Пианта.</h2><p class="feature-intro">Не выбирайте между эстетикой и комфортом. Настройте размер спального места, найдите свой оттенок и соберите заявку на индивидуальный расчёт.</p><div class="option-block"><div class="option-label"><span>РАЗМЕР СПАЛЬНОГО МЕСТА</span><span id="selectedSize">160 × 200 см</span></div><div class="options" id="sizeOptions"><button class="option" data-size="140 × 200" aria-pressed="false">140 × 200</button><button class="option active" data-size="160 × 200" aria-pressed="true">160 × 200</button><button class="option" data-size="180 × 200" aria-pressed="false">180 × 200</button><button class="option" data-size="200 × 200" aria-pressed="false">200 × 200</button></div></div><div class="option-block"><div class="option-label"><span>НАСТРОЕНИЕ ОБИВКИ</span><span id="selectedFabric">Ivory / светлый</span></div><div class="swatches" id="fabricOptions"><button class="swatch active" style="--swatch:#e6dfd2" data-fabric="Ivory / светлый" aria-label="Ivory, светлая обивка" aria-pressed="true" title="Ivory"></button><button class="swatch" style="--swatch:#b6a597" data-fabric="Sand / песочный" aria-label="Sand, песочная обивка" aria-pressed="false" title="Sand"></button><button class="swatch" style="--swatch:#8f867a" data-fabric="Stone / каменный" aria-label="Stone, каменная обивка" aria-pressed="false" title="Stone"></button><button class="swatch" style="--swatch:#6b7973" data-fabric="Sage / зелёный" aria-label="Sage, зелёная обивка" aria-pressed="false" title="Sage"></button><button class="swatch" style="--swatch:#454945" data-fabric="Graphite / графит" aria-label="Graphite, графитовая обивка" aria-pressed="false" title="Graphite"></button><button class="swatch" style="--swatch:#765852" data-fabric="Cocoa / коричневый" aria-label="Cocoa, коричневая обивка" aria-pressed="false" title="Cocoa"></button></div><div class="fineprint">Палитра условная, не соответствует реальному каталогу тканей SENSOR.</div></div><label class="switch-row"><input type="checkbox" id="lift"/>Интересует подъёмный механизм</label><label class="switch-row"><input type="checkbox" id="custom"/>Нужны индивидуальные размеры</label><div class="feature-bottom"><div class="feature-price" id="featurePrice">от 93 500 ₽<small>Базовый ориентир с сайта фабрики</small></div><button id="requestBtn" class="cta cta-dark">Получить расчёт <span class="arrow">↗</span></button></div><p class="fineprint">Точный расчёт зависит от выбранной модели, ткани, размеров и основания. Кнопка открывает только демонстрационную форму.</p></div></section>
+<div class="container"><div class="benefits"><div class="benefit"><div class="benefit-symbol">01.</div><h3>Индивидуальные размеры</h3><p>Подбор габаритов под ваш проект и пространство.</p></div><div class="benefit"><div class="benefit-symbol">02.</div><h3>Выбор фактуры</h3><p>Обивка, которая впишется в характер интерьера.</p></div><div class="benefit"><div class="benefit-symbol">03.</div><h3>Продуманная комплектация</h3><p>Подберите конструктивные возможности под ваши задачи.</p></div><div class="benefit"><div class="benefit-symbol">04.</div><h3>Собственная фабрика</h3><p>Сочетание дизайна и индивидуального изготовления.</p></div></div></div>
+<section class="section" id="other"><div class="container"><div class="section-head"><div><span class="eyebrow">04 / ЗАКОНЧЕННОЕ ПРОСТРАНСТВО</span><h2 class="serif">Больше, чем кровать.</h2></div></div><div class="editorial"><article class="editorial-card"><img src="assets/sensor-v4-mattress.svg" alt="Иллюстрация мягкой текстуры матраса"/><h3>Матрасы SENSOR.</h3><p>Подберите комфортное основание сна под собственные ощущения.</p><a class="ghost-link" href="https://sensorsleep.ru/collection/matrasy" target="_blank" rel="noopener noreferrer">Смотреть матрасы <span class="arrow">↗</span></a></article><article class="editorial-card"><img src="assets/sensor-v4-panels.svg" alt="Интерьер с мягкими стеновыми панелями"/><h3>Стеновые панели.</h3><p>Ритм, фактура и новая выразительность пространства.</p><a class="ghost-link" href="https://sensorsleep.ru/" target="_blank" rel="noopener noreferrer">Перейти на сайт фабрики <span class="arrow">↗</span></a></article></div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-main"><div><a class="logo" href="#home">SENS<span class="logo-orbit">O</span>R<small>SLEEP CULTURE</small></a><p class="footer-blurb">Демонстрационный редизайн для мебельной фабрики SENSOR. Независимый концепт, подготовленный для обсуждения визуального направления.</p></div><div><h4>Открыть</h4><a href="#catalog">Кровати</a><a href="#collections">Коллекции</a><a href="#configurator">Подбор обивки</a></div><div><h4>Бренд</h4><a href="#values">Идея</a><a href="#other">Матрасы и панели</a><a href="https://sensorsleep.ru/" target="_blank" rel="noopener noreferrer">Официальный сайт</a></div><div><h4>Обратите внимание</h4><p style="font-size:11px;line-height:1.8;color:#bbc9c0">Это не действующий интернет-магазин. Заказы не отправляются, а элементы сайта служат демонстрацией взаимодействия.</p></div></div><div class="footer-end"><span>© Концепция SENSOR / UX & Visual Direction · 2026</span><span>НЕОФИЦИАЛЬНАЯ ДЕМОВЕРСИЯ · ИЗОБРАЖЕНИЯ - ВИЗУАЛИЗАЦИИ</span></div></div></footer>
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true"><div class="drawer" id="drawer"><div class="drawer-top"><span class="eyebrow" id="drawerTag">DEMO / ЗАПРОС</span><button class="close" id="closeDrawer" aria-label="Закрыть окно">×</button></div><div id="drawerContent"></div></div></div>
+<script>
+const ASSETS={pianta:'assets/sensor-v4-silver.svg',flow:'assets/sensor-v4-gold.svg',infinity:'assets/sensor-v4-platinum.svg',main:'assets/sensor-v4-detail.svg'};
+const products=[
+{id:'pianta',name:'Пианта',collection:'Silver',price:93500,height:'119 см',image:ASSETS.pianta},
+{id:'flow',name:'Флоу',collection:'Gold',price:104940,height:'142 см',image:ASSETS.flow},
+{id:'infinity',name:'Инфинити',collection:'Gold',price:100870,height:'138 см',image:ASSETS.infinity}
+];
+let activeFilter='Все',selectedProduct=products[0],chosenSize='160 × 200',chosenFabric='Ivory / светлый',favorites=new Set(),lastFocus=null;
+const $=id=>document.getElementById(id);
+const money=n=>new Intl.NumberFormat('ru-RU').format(n)+' ₽';
+const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function setFilter(filter){activeFilter=filter;document.querySelectorAll('[data-filter]').forEach(b=>{let on=b.dataset.filter===filter;b.classList.toggle('active',on);b.setAttribute('aria-pressed',on)});renderProducts()}
+function renderProducts(){const shown=products.filter(p=>(activeFilter==='Все'||activeFilter==='Избранное'||p.collection===activeFilter)&&(activeFilter!=='Избранное'||favorites.has(p.id)));$('productGrid').innerHTML=shown.length?shown.map((p,i)=>`<article class="product-card rise"><button class="product-image" data-select="${p.id}" aria-label="Открыть конфигуратор кровати ${escapeHTML(p.name)}"><img src="${p.image}" alt="Концептуальная иллюстрация для модели ${escapeHTML(p.name)}" loading="lazy"><span class="product-index">0${i+1} / ${escapeHTML(p.collection.toUpperCase())}</span></button><button class="fav ${favorites.has(p.id)?'active':''}" data-favorite="${p.id}" aria-label="${favorites.has(p.id)?'Убрать из избранного':'Добавить в избранное'}" aria-pressed="${favorites.has(p.id)}">${favorites.has(p.id)?'♥':'♡'}</button><div class="product-meta"><div><h3>${escapeHTML(p.name)}.</h3><p>КОЛЛЕКЦИЯ ${escapeHTML(p.collection.toUpperCase())} · ИЗГОЛОВЬЕ ${escapeHTML(p.height)}</p></div><strong>от ${money(p.price)}</strong></div><div class="product-foot"><span>Индивидуальные варианты обивки</span><button data-select="${p.id}">Подробнее ↗</button></div></article>`).join(''):'<div class="empty">В избранном пока пусто. Нажмите ♡ у понравившейся модели.</div>';$('favCount').textContent=favorites.size;$('favCount').hidden=favorites.size===0}
+function selectProduct(id){const p=products.find(x=>x.id===id);if(!p)return;selectedProduct=p;$('featureTitle').textContent='Кровать '+p.name+'.';$('featurePrice').innerHTML='от '+money(p.price)+'<small>Базовый ориентир с сайта фабрики</small>';$('featureImage').src=p.image;document.querySelector('#configurator').scrollIntoView({behavior:'smooth'});}
+$('productGrid').addEventListener('click',e=>{let fav=e.target.closest('[data-favorite]');if(fav){let id=fav.dataset.favorite;favorites.has(id)?favorites.delete(id):favorites.add(id);renderProducts();return}let item=e.target.closest('[data-select]');if(item)selectProduct(item.dataset.select)});
+$('filters').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(b)setFilter(b.dataset.filter)});
+document.querySelectorAll('[data-collection]').forEach(a=>a.addEventListener('click',()=>setFilter(a.dataset.collection)));
+$('sizeOptions').addEventListener('click',e=>{let b=e.target.closest('[data-size]');if(!b)return;chosenSize=b.dataset.size;$('selectedSize').textContent=chosenSize+' см';$('sizeOptions').querySelectorAll('button').forEach(x=>{let on=x===b;x.classList.toggle('active',on);x.setAttribute('aria-pressed',on)})});
+$('fabricOptions').addEventListener('click',e=>{let b=e.target.closest('[data-fabric]');if(!b)return;chosenFabric=b.dataset.fabric;$('selectedFabric').textContent=chosenFabric;$('fabricOptions').querySelectorAll('button').forEach(x=>{let on=x===b;x.classList.toggle('active',on);x.setAttribute('aria-pressed',on)})});
+function requestText(){return `Демонстрационный запрос SENSOR\nМодель: ${selectedProduct.name} (${selectedProduct.collection})\nРазмер: ${chosenSize} см\nОттенок обивки (условная палитра): ${chosenFabric}\nПодъёмный механизм: ${$('lift').checked?'интересует':'не выбран'}\nИндивидуальные размеры: ${$('custom').checked?'да':'нет'}\nЦена: рассчитывается фабрикой, ориентир от ${money(selectedProduct.price)}.`}
+function openDrawer(mode){lastFocus=document.activeElement;const menu=mode==='menu';$('drawerTag').textContent=menu?'НАВИГАЦИЯ / SENSOR':'DEMO / ПРИМЕР ЗАЯВКИ';$('drawerContent').innerHTML=menu?`<h2 id="drawerTitle">Меню.</h2><div class="mobile-links"><a href="#collections">Коллекции ↗</a><a href="#catalog">Кровати ↗</a><a href="#configurator">Подобрать кровать ↗</a><a href="#other">Матрасы и панели ↗</a><a href="#values">О фабрике ↗</a></div>`:`<h2 id="drawerTitle">Ваша кровать.</h2><p>Мы собрали параметры в одном месте. Так могла бы выглядеть заявка на индивидуальный расчёт в новом интернет-магазине.</p><div class="summary" id="summaryBox"></div><label class="field">Ваше имя<input type="text" id="clientName" placeholder="Как к вам обращаться?" autocomplete="off"/></label><label class="field">Комментарий к проекту<textarea id="clientNote" placeholder="Например, особая высота изголовья или пожелания по обивке"></textarea></label><button id="copyRequest" class="cta cta-dark">Скопировать параметры <span class="arrow">↗</span></button><div class="notice" id="requestNotice" role="status">Демо-режим: запрос никуда не отправляется.</div><p>Это презентационная форма. Она не отправляет данные на сервер и не создаёт заказ.</p>`;$('overlay').classList.add('open');$('overlay').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';$('closeDrawer').focus();if(!menu){$('summaryBox').textContent=requestText();$('copyRequest').addEventListener('click',async()=>{let txt=requestText()+`\nИмя: ${$('clientName').value||'не указано'}\nКомментарий: ${$('clientNote').value||'нет'}`;try{await navigator.clipboard.writeText(txt);$('requestNotice').textContent='Параметры скопированы. Данные никуда не отправлялись.'}catch(e){$('requestNotice').textContent='Копирование недоступно в этом браузере. Параметры видны в блоке выше.'}$('requestNotice').classList.add('show')})}}
+function closeDrawer(){if(!$('overlay').classList.contains('open'))return;$('overlay').classList.remove('open');$('overlay').setAttribute('aria-hidden','true');document.body.style.overflow='';lastFocus?.focus()}
+$('requestBtn').addEventListener('click',()=>openDrawer('request'));
+$('cartBtn').addEventListener('click',()=>openDrawer('request'));
+$('mobileMenu').addEventListener('click',()=>openDrawer('menu'));
+$('closeDrawer').addEventListener('click',closeDrawer);
+$('overlay').addEventListener('click',e=>{if(e.target===$('overlay')||e.target.closest('.mobile-links a'))closeDrawer()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer();if(e.key==='Tab'&&$('overlay').classList.contains('open')){let els=Array.from($('drawer').querySelectorAll('button,a,input,textarea')).filter(el=>el.offsetParent!==null);if(!els.length)return;let a=els[0],b=els[els.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();b.focus()}else if(!e.shiftKey&&document.activeElement===b){e.preventDefault();a.focus()}}});
+$('searchBtn').addEventListener('click',()=>document.getElementById('catalog').scrollIntoView({behavior:'smooth'}));
+$('favoritesBtn').addEventListener('click',()=>{setFilter('Избранное');document.getElementById('catalog').scrollIntoView({behavior:'smooth'})});
+renderProducts();
+
+/* Exclusive SENSOR interaction concept: ambient light scenarios. */
+const lightImage=document.getElementById('lightImage');
+lightImage.src=document.querySelector('.hero-visual img').src;
+const moodCopy={day:{title:'Тихое утро.',description:'Мягкий дневной свет раскрывает оттенки ткани и подчёркивает фактуру изголовья.'},evening:{title:'Время замедлиться.',description:'Тёплый вечерний свет делает спальню камерной. Фактура обивки ощущается глубже, а контуры становятся мягче.'},night:{title:'Место для тишины.',description:'Приглушённый ночной свет превращает спальню в личное пространство для отдыха и восстановления.'}};
+document.querySelectorAll('[data-mood-choice]').forEach(button=>button.addEventListener('click',()=>{
+  const mood=button.dataset.moodChoice;
+  document.getElementById('lightStage').dataset.mood=mood;
+  document.getElementById('lightTitle').textContent=moodCopy[mood].title;
+  document.getElementById('lightDescription').textContent=moodCopy[mood].description;
+  document.querySelectorAll('[data-mood-choice]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+}));
+</script>
+<!-- Фотографии в этой демоверсии являются концептуальными визуализациями, а не подтвержденными фотографиями продукции SENSOR. -->
+</body></html>
+<!-- SENSOR V5: lighter canvas with selective navy accents; V4 preserved in index.html. -->
