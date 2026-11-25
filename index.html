@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="theme-color" content="#202b2b"/>
+<meta name="theme-color" content="#17213a"/>
 <title>SENSOR / Концепт нового опыта сна</title>
 <meta name="description" content="Демонстрационный концепт SENSOR: премиальная типографика, интерактивные сценарии освещения, каталог и подбор комплектации."/>
 <style>
@@ -29,12 +29,95 @@
 .sensor-mark:after{transform:rotate(32deg) scaleX(.59);opacity:.52}.sensor-mark i{width:5px;height:5px;background:currentColor;border-radius:50%;z-index:2}
 .light-lab{background:#e8e7e1;padding:108px 0;overflow:hidden}.light-head{display:grid;grid-template-columns:1fr .75fr;align-items:end;gap:36px;margin-bottom:35px}.light-head h2{font-size:clamp(44px,5vw,80px);line-height:.97;margin:13px 0 0}.light-head h2 i{color:#879788;font-style:normal}.light-head p{max-width:350px;color:#5b6560;font-size:13px;line-height:1.9;margin:0 0 5px}.light-stage{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(300px,.6fr);min-height:590px;background:#24312c;color:white}.light-image{position:relative;min-height:590px;overflow:hidden;background:#b8b5ad;isolation:isolate}.light-image img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;filter:brightness(1.06) saturate(.82) sepia(.06);transition:filter .85s ease,transform .85s ease;transform:scale(1.015)}.light-image:after{content:'';position:absolute;inset:0;pointer-events:none;transition:background .85s ease;background:linear-gradient(105deg,rgba(246,228,194,.2),transparent 50%)}.light-stage[data-mood="day"] .light-image img{filter:brightness(1.12) saturate(.82) sepia(.03)}.light-stage[data-mood="day"] .light-image:after{background:linear-gradient(115deg,rgba(250,243,214,.23),transparent 48%)}.light-stage[data-mood="evening"] .light-image img{filter:brightness(.72) saturate(.88) sepia(.25)}.light-stage[data-mood="evening"] .light-image:after{background:linear-gradient(112deg,rgba(239,142,75,.24),rgba(40,27,38,.28) 80%)}.light-stage[data-mood="night"] .light-image img{filter:brightness(.42) saturate(.61) hue-rotate(10deg)}.light-stage[data-mood="night"] .light-image:after{background:linear-gradient(112deg,rgba(26,53,86,.48),rgba(12,18,30,.56))}.light-image-label{position:absolute;left:32px;top:30px;z-index:2;display:flex;align-items:center;gap:13px;color:white;font-size:10px;letter-spacing:.16em;font-weight:600;text-shadow:0 1px 12px #222}.light-panel{min-height:590px;padding:55px clamp(27px,3.8vw,63px);display:flex;flex-direction:column;justify-content:center}.light-panel .sensor-mark{color:#dae9cb;margin-bottom:14px}.light-panel h3{font-size:clamp(36px,3.4vw,54px);line-height:1.03;margin:15px 0 13px;font-weight:400;min-height:112px;display:flex;align-items:center}.light-panel .light-body{font-size:12px;color:#c7d2c6;line-height:1.9;min-height:110px;max-width:300px}.light-options{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0 25px}.light-choice{border:1px solid #7a877d;background:transparent;padding:13px 8px;color:#dde4dc;font-size:11px;text-align:center;transition:.2s;display:flex;flex-direction:column;align-items:center;gap:9px}.light-choice .light-dot{width:20px;height:20px;border-radius:50%;background:var(--tone);box-shadow:0 1px 11px #1114}.light-choice:hover,.light-choice[aria-pressed="true"]{color:#25312b;background:#e5e8df;border-color:#e5e8df}.light-note{font-size:10px;color:#b6c5b9;line-height:1.7;border-top:1px solid #68776c;padding-top:18px}.light-page-mark{letter-spacing:.19em;font-size:10px;opacity:.72}.light-link{margin-top:18px;color:#e1edcd!important;align-self:flex-start}
 @media(max-width:960px){.light-stage{grid-template-columns:1fr}.light-image{min-height:420px}.light-panel{padding:35px}.light-panel .light-body{min-height:0}.light-options{max-width:400px}}@media(max-width:760px){.light-lab{padding:62px 0}.light-head{grid-template-columns:1fr;gap:14px}.light-head h2{font-size:51px}.light-image{min-height:330px}.light-panel{padding:36px 25px}.light-image-label{top:20px;left:21px}}
+
+/* SENSOR V4 brand palette: deep navy and warm gold; original V4 features preserved */
+:root{--night:#1a2540;--ink:#202b45;--mist:#f1f2f7;--canvas:#f8f8fa;--sage:#b2bad0;--accent:#d1aa71;--line:#d9dce5;--muted:#71788c;--white:#fff;--shadow:0 24px 65px rgba(21,28,51,.16)}
+body{background:#f8f8fa;color:var(--ink)}
+::selection{background:#d1aa71;color:#19253e}
+.demo-banner{background:#e9dfcd;color:#182540}
+.header{background:#18233c;color:#f7f5ef;border-bottom:1px solid rgba(220,184,125,.22)}
+.header-inner{height:84px}
+.header .logo,.footer .logo{font-family:Onest,Arial,sans-serif;font-size:29px;letter-spacing:.23em;font-weight:400;color:#faf9f5;display:inline-flex;align-items:baseline}
+.logo small{display:none}
+.logo-orbit{position:relative;display:inline-block;color:#c9a062;letter-spacing:0;margin-right:.15em}
+.logo-orbit:after{content:"";position:absolute;width:2px;height:15px;top:25%;left:49%;background:#f3efe5;transform:rotate(36deg);border-radius:3px;box-shadow:0 0 0 2px #18233c}
+.header-nav a{font-weight:500;color:#f7f5f1}
+.header-nav a:hover{color:#ddb87f;opacity:1}
+.icon-btn:hover{border-color:#bd985b}
+.dot-count{background:#d2ab70;color:#1a263e}
+.cta{background:linear-gradient(125deg,#e4c58f,#c49b5c);border:1px solid #c9a468;color:#18253b;border-radius:5px;font-weight:700;box-shadow:0 5px 22px rgba(18,24,43,.15)}
+.cta:hover{background:#edd7ac}
+.hero{grid-template-columns:43% 57%;background:#15213c}
+.hero-content{background:linear-gradient(90deg,#14213c,rgba(20,32,59,.97) 76%,rgba(20,32,59,.45));z-index:2}
+.hero-content::before{background:radial-gradient(circle at 30% 20%,rgba(111,133,191,.25),transparent 60%)}
+.hero-kicker{color:#e4c28c}
+.hero-kicker:before{background:#e4c28c}
+.hero h1 em{color:#e6c48b}
+.hero-p{color:#e3e5eb}
+.hero-visual{background:#18233e}
+.hero-visual img{filter:saturate(.84) contrast(1.07) brightness(.84)}
+.hero-visual:after{background:linear-gradient(90deg,rgba(16,25,49,.45),transparent 48%),linear-gradient(0deg,rgba(12,18,40,.36),transparent 38%)}
+.hero-marker span{border-color:#e3bd7f}
+.hero-marker span:first-child{background:#e3bd7f}
+.small-intro{background:#22304e;color:#e9e9ee;border-color:#36425d}
+#collections,#catalog{background:#202c49;color:#f7f5f0}
+#collections .section-head h2,#catalog .section-head h2{color:#faf8f3}
+#collections .section-head p,#catalog .section-head p{color:#bec7d8}
+.collection{background:#18233e;border:1px solid rgba(215,176,109,.32);border-radius:12px;overflow:hidden}
+.collection img{filter:saturate(.84) brightness(.86)}
+.collection:after{background:linear-gradient(0deg,rgba(14,22,42,.87),transparent 84%)}
+.shop-bg{background:#202c49}
+.shop-nav .filter-chip{color:#f2f1f0;background:rgba(255,255,255,.04);border-color:#65718a}
+.shop-nav .filter-chip.active,.shop-nav .filter-chip:hover{background:#cda469;border-color:#cda469;color:#1b2a43}
+.product-card{color:#f8f8f9}
+.product-image{background:#364563;border-radius:10px}
+.product-image img{filter:saturate(.88) contrast(1.04)}
+.product-index{background:#f2efe8;color:#1e2b46}
+.product-meta p,.product-foot{color:#cbd2dd}
+.product-foot{border-color:#55617a}
+.product-foot button{color:#e3c492}
+.fav{color:#1d2b46;background:#fbf8f3}
+.fav.active{color:#c39960}
+.statement{background:#e6e9f1}
+.statement h2,.statement p{color:#1d2d4b}
+.product-feature{background:#f7f7fa}
+.feature-photo{background:#b4bac8}
+.feature-photo img{filter:saturate(.91) contrast(1.04)}
+.photo-label{background:#1b2946;color:#e3c08a}
+.option{border-color:#bcc3d2;color:#273651}
+.option.active{background:#1b2a47;border-color:#1b2a47;color:white}
+.swatch.active{outline-color:#bb955b}
+.switch-row input{accent-color:#c59d66}
+.benefit-symbol{color:#b68a51}
+.editorial-card{background:#182743;border-radius:9px;overflow:hidden}
+.editorial-card:after{background:linear-gradient(0deg,rgba(13,23,46,.9),rgba(19,29,51,.04) 80%)}
+.footer{background:#111c34;color:#f5f3ed}
+.footer h4{color:#dabc89}
+.footer a:not(.logo){color:#c5cfdf}
+.footer-end{border-color:#34415c}
+.overlay{background:rgba(10,17,36,.8)}
+.drawer{background:#f8f8fb}
+.summary{background:#e5e9f2}
+.notice{background:#ece4d6}
+.light-lab{background:#eff1f6}
+.light-head h2{color:#1c2946}
+.light-head h2 i{color:#b8915b}
+.light-head p{color:#5f6a81}
+.light-stage,.light-panel{background:#1a2846}
+.light-image-label{color:#edd1a4}
+.sensor-mark{color:#d4ae75}
+.light-stage{min-height:540px}
+.light-panel{min-height:540px}
+.light-panel .light-body{min-height:135px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline-color:#d2aa70}
+@media(max-width:760px){.header-inner{height:68px}.header .logo{font-size:23px}.hero{flex-direction:column-reverse}.hero-content{background:#15223e;padding:52px 6%}.hero-visual{height:350px;min-height:350px}.light-stage,.light-panel{min-height:0}.light-panel .light-body{min-height:135px}}
+
 </style>
 </head>
 <body>
 <div class="demo-banner"><b>КОНЦЕПЦИЯ / НЕОФИЦИАЛЬНАЯ ДЕМОВЕРСИЯ</b><span>Дизайн-предложение для SENSOR · отдельные визуализации и сценарии покупки</span></div>
 <header class="header"><div class="header-inner">
-<a class="logo" href="#home" aria-label="SENSOR, на главную">SENSOR<small>SLEEP CULTURE</small></a>
+<a class="logo" href="#home" aria-label="SENSOR, на главную">SENS<span class="logo-orbit">O</span>R<small>SLEEP CULTURE</small></a>
 <nav class="header-nav" aria-label="Основная навигация"><a href="#collections">Коллекции</a><a href="#catalog">Кровати</a><a href="#configurator">Подобрать кровать</a><a href="#other">Матрасы и панели</a><a href="#values">О фабрике</a></nav>
 <div class="nav-actions"><button class="icon-btn" id="searchBtn" title="Перейти к каталогу" aria-label="Поиск"><svg viewBox="0 0 24 24"><circle cx="10.7" cy="10.7" r="6.5"/><path d="m16 16 5 5"/></svg></button><button class="icon-btn" id="favoritesBtn" title="Избранное" aria-label="Показать избранное"><svg viewBox="0 0 24 24"><path d="M20 9c0 5-8 11-8 11S4 14 4 9a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9z"/></svg><span class="dot-count" id="favCount" hidden>0</span></button><button class="icon-btn" id="cartBtn" title="Запросить расчёт" aria-label="Открыть заявку"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1 13H5L4 8zM9 9V6a3 3 0 0 1 6 0v3"/></svg></button><button class="icon-btn menu-btn" id="mobileMenu" title="Меню" aria-label="Открыть меню"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></div></header>
 <main>
@@ -48,7 +131,7 @@
 <div class="container"><div class="benefits"><div class="benefit"><div class="benefit-symbol">01.</div><h3>Индивидуальные размеры</h3><p>Подбор габаритов под ваш проект и пространство.</p></div><div class="benefit"><div class="benefit-symbol">02.</div><h3>Выбор фактуры</h3><p>Обивка, которая впишется в характер интерьера.</p></div><div class="benefit"><div class="benefit-symbol">03.</div><h3>Продуманная комплектация</h3><p>Подберите конструктивные возможности под ваши задачи.</p></div><div class="benefit"><div class="benefit-symbol">04.</div><h3>Собственная фабрика</h3><p>Сочетание дизайна и индивидуального изготовления.</p></div></div></div>
 <section class="section" id="other"><div class="container"><div class="section-head"><div><span class="eyebrow">04 / ЗАКОНЧЕННОЕ ПРОСТРАНСТВО</span><h2 class="serif">Больше, чем кровать.</h2></div></div><div class="editorial"><article class="editorial-card"><img src="assets/sensor-v4-mattress.svg" alt="Иллюстрация мягкой текстуры матраса"/><h3>Матрасы SENSOR.</h3><p>Подберите комфортное основание сна под собственные ощущения.</p><a class="ghost-link" href="https://sensorsleep.ru/collection/matrasy" target="_blank" rel="noopener noreferrer">Смотреть матрасы <span class="arrow">↗</span></a></article><article class="editorial-card"><img src="assets/sensor-v4-panels.svg" alt="Интерьер с мягкими стеновыми панелями"/><h3>Стеновые панели.</h3><p>Ритм, фактура и новая выразительность пространства.</p><a class="ghost-link" href="https://sensorsleep.ru/" target="_blank" rel="noopener noreferrer">Перейти на сайт фабрики <span class="arrow">↗</span></a></article></div></div></section>
 </main>
-<footer class="footer"><div class="container"><div class="footer-main"><div><a class="logo" href="#home">SENSOR<small>SLEEP CULTURE</small></a><p class="footer-blurb">Демонстрационный редизайн для мебельной фабрики SENSOR. Независимый концепт, подготовленный для обсуждения визуального направления.</p></div><div><h4>Открыть</h4><a href="#catalog">Кровати</a><a href="#collections">Коллекции</a><a href="#configurator">Подбор обивки</a></div><div><h4>Бренд</h4><a href="#values">Идея</a><a href="#other">Матрасы и панели</a><a href="https://sensorsleep.ru/" target="_blank" rel="noopener noreferrer">Официальный сайт</a></div><div><h4>Обратите внимание</h4><p style="font-size:11px;line-height:1.8;color:#bbc9c0">Это не действующий интернет-магазин. Заказы не отправляются, а элементы сайта служат демонстрацией взаимодействия.</p></div></div><div class="footer-end"><span>© Концепция SENSOR / UX & Visual Direction · 2026</span><span>НЕОФИЦИАЛЬНАЯ ДЕМОВЕРСИЯ · ИЗОБРАЖЕНИЯ - ВИЗУАЛИЗАЦИИ</span></div></div></footer>
+<footer class="footer"><div class="container"><div class="footer-main"><div><a class="logo" href="#home">SENS<span class="logo-orbit">O</span>R<small>SLEEP CULTURE</small></a><p class="footer-blurb">Демонстрационный редизайн для мебельной фабрики SENSOR. Независимый концепт, подготовленный для обсуждения визуального направления.</p></div><div><h4>Открыть</h4><a href="#catalog">Кровати</a><a href="#collections">Коллекции</a><a href="#configurator">Подбор обивки</a></div><div><h4>Бренд</h4><a href="#values">Идея</a><a href="#other">Матрасы и панели</a><a href="https://sensorsleep.ru/" target="_blank" rel="noopener noreferrer">Официальный сайт</a></div><div><h4>Обратите внимание</h4><p style="font-size:11px;line-height:1.8;color:#bbc9c0">Это не действующий интернет-магазин. Заказы не отправляются, а элементы сайта служат демонстрацией взаимодействия.</p></div></div><div class="footer-end"><span>© Концепция SENSOR / UX & Visual Direction · 2026</span><span>НЕОФИЦИАЛЬНАЯ ДЕМОВЕРСИЯ · ИЗОБРАЖЕНИЯ - ВИЗУАЛИЗАЦИИ</span></div></div></footer>
 <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true"><div class="drawer" id="drawer"><div class="drawer-top"><span class="eyebrow" id="drawerTag">DEMO / ЗАПРОС</span><button class="close" id="closeDrawer" aria-label="Закрыть окно">×</button></div><div id="drawerContent"></div></div></div>
 <script>
 const ASSETS={pianta:'assets/sensor-v4-silver.svg',flow:'assets/sensor-v4-gold.svg',infinity:'assets/sensor-v4-platinum.svg',main:'assets/sensor-v4-detail.svg'};
