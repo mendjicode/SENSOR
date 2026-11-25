@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="theme-color" content="#17213a"/>
-<title>SENSOR / Концепт нового опыта сна</title>
+<meta name="theme-color" content="#fcfbf8"/>
+<title>SENSOR / Light Concept V5</title>
 <meta name="description" content="Демонстрационный концепт SENSOR: премиальная типографика, интерактивные сценарии освещения, каталог и подбор комплектации."/>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Oranienbaum&display=swap');
@@ -112,6 +112,100 @@ body{background:#f8f8fa;color:var(--ink)}
 a:focus-visible,button:focus-visible,input:focus-visible{outline-color:#d2aa70}
 @media(max-width:760px){.header-inner{height:68px}.header .logo{font-size:23px}.hero{flex-direction:column-reverse}.hero-content{background:#15223e;padding:52px 6%}.hero-visual{height:350px;min-height:350px}.light-stage,.light-panel{min-height:0}.light-panel .light-body{min-height:135px}}
 
+
+/* SENSOR V5: warm minimal canvas, navy strictly as accent. V4 layout and interactions retained. */
+:root{--night:#233a62;--ink:#242b34;--mist:#f4f1ec;--canvas:#fcfbf8;--sage:#dedbd4;--accent:#284d87;--line:#e6e3dd;--muted:#727780;--white:#fff;--shadow:0 24px 65px rgba(38,43,54,.10)}
+body{background:#fcfbf8;color:#242b34}
+::selection{background:#c7d6eb;color:#1d3559}
+.demo-banner{background:#f0eee9;color:#657080;border-bottom:1px solid #e3e2dd}
+.header{background:rgba(253,252,249,.97);color:#252c36;border-bottom:1px solid #e7e4df}
+.header .logo{color:#24334c}
+.header .logo-orbit{color:#2d548b}
+.header .logo-orbit:after{background:#2d548b;box-shadow:0 0 0 2px #fcfbf8}
+.header-nav a{color:#37404c}
+.header-nav a:hover{color:#2d548b}
+.icon-btn:hover{border-color:#cad7e8}
+.dot-count{background:#2d548b;color:white}
+.cta,.cta-dark{background:#284d87;border:1px solid #284d87;color:#fff;box-shadow:none;border-radius:4px}
+.cta:hover,.cta-dark:hover{background:#1f3b68;border-color:#1f3b68;color:#fff}
+.hero{grid-template-columns:47% 53%;background:#f4f1eb}
+.hero-content{background:#f4f1eb;color:#27303b}
+.hero-content::before{background:radial-gradient(circle at 25% 15%,rgba(255,255,255,.85),transparent 55%);opacity:1}
+.hero-kicker{color:#43608c}
+.hero-kicker:before{background:#43608c}
+.hero h1{color:#252c34}
+.hero h1 em{color:#2d548b}
+.hero-p{color:#666e79}
+.hero-desc{color:#7a7f87}
+.hero-visual{background:#e5dfd6}
+.hero-visual img{filter:saturate(.84) contrast(1.02) brightness(1.04)}
+.hero-visual:after{background:linear-gradient(90deg,rgba(244,241,235,.17),transparent 30%),linear-gradient(0deg,rgba(26,35,43,.12),transparent 32%)}
+.hero-marker span{border-color:#f7f5f1}
+.hero-marker span:first-child{background:#f7f5f1}
+.small-intro{background:#fcfbf8;color:#404955;border-color:#e7e4df}
+#collections{background:#fcfbf8;color:#26303c}
+#catalog{background:#f5f3ef;color:#26303c}
+#collections .section-head h2,#catalog .section-head h2{color:#27303b}
+#collections .section-head p,#catalog .section-head p{color:#717781}
+.collection{background:#ded9d1;border:0;border-radius:7px}
+.collection img{filter:saturate(.82) brightness(.98)}
+.collection:after{background:linear-gradient(0deg,rgba(21,28,33,.79),transparent 74%)}
+.collection-top,.collection-body{color:#fff}
+.shop-bg{background:#f5f3ef}
+.shop-nav .filter-chip{color:#56616c;background:#fff;border-color:#d9dce0}
+.shop-nav .filter-chip.active,.shop-nav .filter-chip:hover{background:#284d87;border-color:#284d87;color:white}
+.product-card{color:#2d3540}
+.product-image{background:#e3dfd9;border-radius:5px}
+.product-image img{filter:saturate(.84) contrast(1.02)}
+.product-index{background:#fdfcf8;color:#4d5a68}
+.product-meta p,.product-foot{color:#747982}
+.product-foot{border-color:#dadad9}
+.product-foot button{color:#284d87}
+.fav{background:#fcfbf8;color:#334154}
+.fav.active{color:#bb6262}
+.statement{background:#e9e8e3}
+.statement h2{color:#29313a}
+.statement p{color:#626b72}
+.statement i{color:#2e5587}
+.product-feature{background:#fcfbf8}
+.feature-photo{background:#e3ded5}
+.feature-photo img{filter:saturate(.83) contrast(1.02)}
+.photo-label{background:#fcfbf8;color:#2d548b}
+.option{border-color:#d7d9da;color:#414c59;background:#fff}
+.option.active{background:#284d87;border-color:#284d87;color:white}
+.swatch.active{outline-color:#284d87}
+.switch-row input{accent-color:#284d87}
+.benefit-symbol{color:#2e5587}
+.editorial-card{background:#cfcac3;border-radius:5px}
+.editorial-card:after{background:linear-gradient(0deg,rgba(24,29,34,.75),transparent 79%)}
+.footer{background:#eeece7;color:#303946;border-top:1px solid #dddcd8}
+.footer .logo{color:#27354a}
+.footer .logo-orbit:after{box-shadow:0 0 0 2px #eeece7}
+.footer .footer-blurb{color:#6f7680}
+.footer h4{color:#2e5488}
+.footer a:not(.logo){color:#515c69}
+.footer a:hover{color:#284d87}
+.footer-end{border-color:#d4d6d8;color:#7b8089}
+.footer-main>div:last-child p{color:#6f7680!important}
+.overlay{background:rgba(22,30,43,.6)}
+.drawer{background:#fcfbf8}
+.summary{background:#f0eee9}
+.notice{background:#e5eef7}
+.light-lab{background:#faf9f6}
+.light-head h2{color:#25303d}
+.light-head h2 i{color:#2d548b}
+.light-head p{color:#6f7681}
+.light-stage,.light-panel{background:#f0eee9;color:#293441}
+.light-image-label{color:white}
+.light-panel .sensor-mark{color:#2d548b}
+.light-panel .light-body{color:#636d79}
+.light-choice{color:#4d5967;border-color:#d0d2d2;background:#faf9f6}
+.light-choice:hover,.light-choice[aria-pressed="true"]{background:#284d87;border-color:#284d87;color:#fff}
+.light-note{color:#727b85;border-color:#d5d7d8}
+.light-link{color:#284d87!important}
+a:focus-visible,button:focus-visible,input:focus-visible{outline-color:#416caa}
+@media(max-width:760px){.hero{flex-direction:column-reverse}.hero-content{background:#f4f1eb}.header .logo{color:#24334c}.light-stage,.light-panel{background:#f0eee9}}
+
 </style>
 </head>
 <body>
@@ -179,4 +273,4 @@ document.querySelectorAll('[data-mood-choice]').forEach(button=>button.addEventL
 </script>
 <!-- Фотографии в этой демоверсии являются концептуальными визуализациями, а не подтвержденными фотографиями продукции SENSOR. -->
 </body></html>
-<!-- SENSOR V4: Original low-resolution photos replaced with high-resolution editorial concept imagery; AI-generated scenes are illustrative, not product photographs. -->
+<!-- SENSOR V5: lighter canvas with selective navy accents; V4 preserved in index.html. -->
